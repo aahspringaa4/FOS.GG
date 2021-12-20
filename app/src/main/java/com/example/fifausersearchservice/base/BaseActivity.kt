@@ -1,4 +1,4 @@
-package com.example.fifausersearchservice
+package com.example.fifausersearchservice.base
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
