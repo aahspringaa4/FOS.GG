@@ -2,8 +2,8 @@
 <layout>
     <data>
         <variable
-            name="activity"
-            type="com.example.fifausersearchservice.feature.rank.ToprankActivity" />
+            name="fragment"
+            type="com.example.fifausersearchservice.feature.rank.TopRankFragment" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
