@@ -11,7 +11,7 @@ abstract class BaseActivity<B: ViewDataBinding> (
     @LayoutRes private val layoutId: Int
 ) : AppCompatActivity() {
 
-    protected lateinit var binding: B
+    lateinit var binding: B
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
