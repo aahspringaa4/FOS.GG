@@ -1,4 +1,4 @@
-package com.example.fifausersearchservice.data
+val BASE_URL = ""
 
-class Constans {
-}
+var ACCESS_TOKEN: String = "default"
+var REFRESH_TOKEN: String = "default"
