@@ -13,10 +13,7 @@
             android:name=".feature.rank.ToprankActivity"
             android:exported="false" />
         <activity
-            android:name=".base.BaseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".feature.MainActivity"
+            android:name=".feature.main.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
