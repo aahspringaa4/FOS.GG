@@ -21,6 +21,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
     private val vm: MainViewModel by viewModel()
 
+    companion object{
+        var nickName: String = ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,10 +33,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             val intent = intent
             startActivity(intent)
             overridePendingTransition(0, 0)
-        }
-
-        binding.btSearch.setOnClickListener {
-
         }
 
         setFrag(0)
@@ -52,10 +52,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         binding.fgRank.setOnClickListener {
             setFrag(3)
         }
+
+        binding.run {
+            binding.btSearch.setOnClickListener {
+                nickName = binding.etUser.text.toString()
+            }
+        }
     }
 
     override fun observeEvent() {
+        vm.run{
+            success.observe(this@MainActivity,{
+                it.run{
+                    UserFragment.userSearch()
+                }
+            })
 
+            failed.observe(this@MainActivity,{
+                it.run {
+                    showToast("ERROR : 500")
+                }
+            })
+        }
     }
 
     private fun setFrag(fragnum : Int) {
