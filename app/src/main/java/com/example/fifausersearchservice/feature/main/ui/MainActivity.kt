@@ -20,8 +20,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 ) {
 
     private val vm: MainViewModel by viewModel()
+    val userFragment = UserFragment()
 
-    companion object{
+    companion object {
         var nickName: String = ""
     }
 
@@ -37,7 +38,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
         setFrag(0)
 
-        binding.fgSearch.setOnClickListener{
+        binding.fgSearch.setOnClickListener {
             setFrag(0)
         }
 
@@ -53,22 +54,21 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             setFrag(3)
         }
 
-        binding.run {
-            binding.btSearch.setOnClickListener {
-                nickName = binding.etUser.text.toString()
-            }
+        binding.btSearch.setOnClickListener {
+            nickName = binding.etUser.text.toString()
         }
     }
 
     override fun observeEvent() {
-        vm.run{
-            success.observe(this@MainActivity,{
-                it.run{
-                    UserFragment.userSearch()
+        vm.run {
+            success.observe(this@MainActivity, {
+                it.run {
+                    val userFragment = UserFragment()
+                    userFragment.userSearch()
                 }
             })
 
-            failed.observe(this@MainActivity,{
+            failed.observe(this@MainActivity, {
                 it.run {
                     showToast("ERROR : 500")
                 }
@@ -76,9 +76,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         }
     }
 
-    private fun setFrag(fragnum : Int) {
+    private fun setFrag(fragnum: Int) {
         val ft = supportFragmentManager.beginTransaction()
-        when(fragnum){
+        when (fragnum) {
             0 -> {
                 ft.replace(R.id.fragment, UserFragment()).commit()
             }
