@@ -15,7 +15,6 @@ class FOSApplication : Application() {
             modules(
                 listOf(
                     mainModule
-
                 )
             )
         }
