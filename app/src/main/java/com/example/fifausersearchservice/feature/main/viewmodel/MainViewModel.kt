@@ -5,8 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.fifausersearchservice.data.main.MainRepository
 import com.example.fifausersearchservice.feature.main.ui.MainActivity
-import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
-import retrofit2.Response
 import kotlin.properties.Delegates
 
 class MainViewModel(

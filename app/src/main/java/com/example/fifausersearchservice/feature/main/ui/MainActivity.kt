@@ -4,14 +4,11 @@ import android.os.Bundle
 import com.example.fifausersearchservice.R
 import com.example.fifausersearchservice.base.BaseActivity
 import com.example.fifausersearchservice.databinding.ActivityMainBinding
-import android.content.Intent
-import android.util.Log
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
 import com.example.fifausersearchservice.feature.matchsearch.MatchSearchFragment
 import com.example.fifausersearchservice.feature.meta.MetaFragment
 import com.example.fifausersearchservice.feature.rank.TopRankFragment
 import com.example.fifausersearchservice.feature.user.UserFragment
-import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -76,9 +73,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         }
     }
 
-    private fun setFrag(fragnum: Int) {
+    private fun setFrag(fragNum: Int) {
         val ft = supportFragmentManager.beginTransaction()
-        when (fragnum) {
+        when (fragNum) {
             0 -> {
                 ft.replace(R.id.fragment, UserFragment()).commit()
             }
