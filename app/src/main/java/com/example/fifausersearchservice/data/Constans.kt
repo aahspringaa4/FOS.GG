@@ -1,4 +1,5 @@
 val BASE_URL = "https://api.nexon.co.kr/fifaonline4/v1.0/"
 
+var API_Key: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMzE5Mzg2MTA0IiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjUwMDoxMCIsIm5iZiI6MTYzNTA3NTA3OSwiZXhwIjoxNjUwNjI3MDc5LCJpYXQiOjE2MzUwNzUwNzl9.eSHSIwIA95rxyrlSigGakj58ZHynda5l_bRcN6YJJMI"
 var ACCESS_TOKEN: String = "default"
 var REFRESH_TOKEN: String = "default"
