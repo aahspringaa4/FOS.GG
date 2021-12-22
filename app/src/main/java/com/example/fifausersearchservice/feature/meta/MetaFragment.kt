@@ -7,17 +7,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.fifausersearchservice.R
 import com.example.fifausersearchservice.base.BaseFragment
-import com.example.fifausersearchservice.databinding.MatchsearchBinding
-import com.example.fifausersearchservice.databinding.MetaBinding
+import com.example.fifausersearchservice.databinding.FragmentMetaBinding
 
-class MetaFragment: BaseFragment<MetaBinding>(
-    R.layout.meta
+class MetaFragment: BaseFragment<FragmentMetaBinding>(
+    R.layout.fragment_meta
 ){
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.meta, container, false)
-
-        return binding.root
-    }
 
     override fun observeEvent() {
 
