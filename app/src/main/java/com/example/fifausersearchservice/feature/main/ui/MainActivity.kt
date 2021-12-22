@@ -17,7 +17,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 ) {
 
     private val vm: MainViewModel by viewModel()
-    val userFragment = UserFragment()
 
     companion object {
         var nickName: String = ""
@@ -53,6 +52,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
         binding.btSearch.setOnClickListener {
             nickName = binding.etUser.text.toString()
+            vm.userPost()
         }
     }
 
