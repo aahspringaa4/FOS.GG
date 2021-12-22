@@ -4,12 +4,12 @@ import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface MainApi {
-    @POST("users/{nickname}")
+    @GET("users")
     fun createUserPost(
-        @Path("nickname") nickname: String
+        @Header("Authorization") API_Key: String,
+        @Query("nickname") nickname: String
     ): Single<Response<ResponseUserDTO>>
 }
