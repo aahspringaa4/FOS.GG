@@ -12,22 +12,17 @@ import com.example.fifausersearchservice.databinding.UserBinding
 import com.example.fifausersearchservice.feature.main.ui.MainActivity
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
 import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment: BaseFragment<UserBinding>(
     R.layout.user
 ){
-    private val vm: MainViewModel by viewModel()
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        binding = DataBindingUtil.inflate(inflater, R.layout.user, container, false)
-
-        return binding.root
-    }
-
+    private val vm: MainViewModel by sharedViewModel()
     override fun observeEvent() {
-
+        vm.success.observe(viewLifecycleOwner, {
+            userSearch()
+        })
     }
 
     override fun initView() {
