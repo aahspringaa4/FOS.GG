@@ -1,5 +1,7 @@
 package com.example.fifausersearchservice.data.main
 
+import ACCESS_TOKEN
+import API_Key
 import com.example.fifausersearchservice.data.mainApi
 import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -10,8 +12,10 @@ import retrofit2.Call
 import retrofit2.Response
 
 class MainRepository{
+
+
     fun userPost(nickname: String) : @NonNull Single<Response<ResponseUserDTO>> =
-        mainApi.createUserPost(nickname)
+        mainApi.createUserPost(API_Key, nickname)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
 }
