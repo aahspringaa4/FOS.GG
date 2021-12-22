@@ -7,16 +7,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.fifausersearchservice.R
 import com.example.fifausersearchservice.base.BaseFragment
-import com.example.fifausersearchservice.databinding.MetaBinding
-import com.example.fifausersearchservice.databinding.UserBinding
+import com.example.fifausersearchservice.databinding.FragmentUsersBinding
 import com.example.fifausersearchservice.feature.main.ui.MainActivity
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
 import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class UserFragment: BaseFragment<UserBinding>(
-    R.layout.user
+class UserFragment: BaseFragment<FragmentUsersBinding>(
+    R.layout.fragment_users
 ){
     private val vm: MainViewModel by sharedViewModel()
     override fun observeEvent() {
