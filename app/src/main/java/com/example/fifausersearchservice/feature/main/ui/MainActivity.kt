@@ -58,13 +58,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
     override fun observeEvent() {
         vm.run {
-            success.observe(this@MainActivity, {
-                it.run {
-                    val userFragment = UserFragment()
-                    userFragment.userSearch()
-                }
-            })
-
             failed.observe(this@MainActivity, {
                 it.run {
                     showToast("ERROR : 500")
