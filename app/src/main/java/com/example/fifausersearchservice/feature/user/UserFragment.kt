@@ -1,18 +1,11 @@
 package com.example.fifausersearchservice.feature.user
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import com.example.fifausersearchservice.R
 import com.example.fifausersearchservice.base.BaseFragment
 import com.example.fifausersearchservice.databinding.FragmentUsersBinding
-import com.example.fifausersearchservice.feature.main.ui.MainActivity
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
-import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment: BaseFragment<FragmentUsersBinding>(
     R.layout.fragment_users
@@ -30,6 +23,8 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
 
     fun userSearch(){
         binding.tvName.text = vm.name
+        binding.tv.visibility = View.VISIBLE
         binding.tvLevel.text = vm.level.toString()
+        binding.textView.visibility = View.VISIBLE
     }
 }
