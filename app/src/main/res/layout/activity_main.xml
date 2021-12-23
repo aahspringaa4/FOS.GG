@@ -186,7 +186,7 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="정석 메타"
+                    android:text="선수 검색"
                     android:textColor="#DBE5E6"
                     android:fontFamily="@font/noto_sans_kr_medium"
                     android:gravity="center"

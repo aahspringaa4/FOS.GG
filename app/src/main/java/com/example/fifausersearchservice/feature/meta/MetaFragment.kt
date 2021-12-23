@@ -12,7 +12,6 @@ import com.example.fifausersearchservice.databinding.FragmentMetaBinding
 class MetaFragment: BaseFragment<FragmentMetaBinding>(
     R.layout.fragment_meta
 ){
-
     override fun observeEvent() {
 
     }
@@ -20,5 +19,4 @@ class MetaFragment: BaseFragment<FragmentMetaBinding>(
     override fun initView() {
 
     }
-
 }
