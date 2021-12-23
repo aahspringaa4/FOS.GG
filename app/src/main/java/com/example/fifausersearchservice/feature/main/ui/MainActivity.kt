@@ -30,6 +30,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             val intent = intent
             startActivity(intent)
             overridePendingTransition(0, 0)
+            setFrag(0)
         }
 
         setFrag(0)
@@ -60,7 +61,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         vm.run {
             failed.observe(this@MainActivity, {
                 it.run {
-                    showToast("ERROR : 500")
+                    showToast("해당 구단주는 존제하지 않습니다 \n 이름이나 형식을 확인해 주세요")
                 }
             })
         }
