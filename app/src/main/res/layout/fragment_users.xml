@@ -34,6 +34,7 @@
             android:text="구단주명 : "
             android:textColor="#707070"
             android:textSize="19sp"
+            android:visibility="invisible"
             app:layout_constraintLeft_toLeftOf="@id/left"
             app:layout_constraintTop_toTopOf="@id/line" />
 
@@ -44,6 +45,7 @@
             android:text="구단주 레벨 : "
             android:textColor="#707070"
             android:textSize="18sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/tv_level"
             app:layout_constraintLeft_toLeftOf="@id/left"
             app:layout_constraintTop_toTopOf="@+id/tv_level" />
@@ -52,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noto_sans_kr_regular"
-            android:text="임세"
+            android:text=""
             android:textColor="#707070"
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="@id/tv"
@@ -64,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noto_sans_kr_medium"
-            android:text="12"
+            android:text=""
             android:textColor="#707070"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/textView"
