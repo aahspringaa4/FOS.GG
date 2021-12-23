@@ -1,6 +1,5 @@
 package com.example.fifausersearchservice.data.main
 
-import ACCESS_TOKEN
 import com.example.fifausersearchservice.feature.user.dto.ResponseMaxDivisionDTO
 import com.example.fifausersearchservice.feature.user.dto.ResponseUserDTO
 import io.reactivex.rxjava3.core.Single

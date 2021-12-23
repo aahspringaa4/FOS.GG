@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name=".di.FOSApplication"
+        android:name="com.example.fifausersearchservice.di.FOSApplication"
         android:allowBackup="true"
         android:icon="@drawable/main_logo"
         android:label="FOS.GG"
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
-            android:name=".feature.main.ui.MainActivity"
+            android:name="com.example.fifausersearchservice.feature.main.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
