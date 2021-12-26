@@ -1,16 +1,18 @@
-package com.example.fifausersearchservice.feature.user
+package com.example.fifausersearchservice.feature.user.dto.ui
 
 import android.view.View
 import com.example.fifausersearchservice.R
 import com.example.fifausersearchservice.base.BaseFragment
 import com.example.fifausersearchservice.databinding.FragmentUsersBinding
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
+import com.example.fifausersearchservice.feature.user.RankListViewData
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class UserFragment: BaseFragment<FragmentUsersBinding>(
     R.layout.fragment_users
 ){
     private val vm: MainViewModel by sharedViewModel()
+    var rankList = arrayListOf<RankListViewData>()
 
     override fun observeEvent() {
         vm.success.observe(viewLifecycleOwner, {
@@ -31,7 +33,7 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
         }
 
         when(vm.division){
-            800 -> binding // 슈퍼 챔피언
+            800 -> binding // 슈퍼 챔피언스
 
             900 -> binding // 챔피언스
 

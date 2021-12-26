@@ -15,5 +15,4 @@ class MatchSearchFragment: BaseFragment<FragmentMatchsearchBinding>(
     override fun initView() {
 
     }
-
 }
