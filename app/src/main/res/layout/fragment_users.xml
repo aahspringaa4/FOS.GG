@@ -5,7 +5,7 @@
     <data>
         <variable
             name="fragment"
-            type="com.example.fifausersearchservice.feature.user.UserFragment" />
+            type="com.example.fifausersearchservice.feature.user.dto.ui.UserFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,92 +71,10 @@
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
-        <LinearLayout
+        <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="@id/left"
-            app:layout_constraintTop_toBottomOf="@id/textView"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bestgrade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="공식 경기 최고 등급 : "
-                    android:textSize="19sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/tv_bestgrade"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_bestgrade"/>
-
-                <TextView
-                    android:id="@+id/tv_bestgrade"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="19sp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/coact"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="공식 경기 감독 모드 최고 등급 : "
-                    android:textSize="19sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/tv_bestcoact"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_bestcoact"/>
-
-                <TextView
-                    android:id="@+id/tv_bestcoact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="19sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/volta"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="볼타 모드 공식 경 최고 등급 : "
-                    android:textSize="19sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/tv_bestvolta"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_bestvolta"/>
-
-                <TextView
-                    android:id="@+id/tv_bestvolta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="19sp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@id/textView"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
