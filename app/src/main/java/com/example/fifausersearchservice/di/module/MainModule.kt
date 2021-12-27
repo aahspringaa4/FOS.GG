@@ -1,11 +1,17 @@
 package com.example.fifausersearchservice.di.module
 
 import com.example.fifausersearchservice.data.main.MainRepository
-import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.dsl.module
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
-val mainModule = module{
-    single{ MainRepository() }
-    viewModel { MainViewModel (get()) }
+@Module
+@InstallIn(SingletonComponent::class)
+object MainModule {
+
+    @Binds
+    fun provideMainRepository(mainRepository: MainRepository): MainRepository = MainRepository()
 }
