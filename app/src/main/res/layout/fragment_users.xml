@@ -5,7 +5,7 @@
     <data>
         <variable
             name="fragment"
-            type="com.example.fifausersearchservice.feature.user.dto.ui.UserFragment" />
+            type="com.example.fifausersearchservice.feature.user.ui.UserFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
