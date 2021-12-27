@@ -8,7 +8,7 @@ import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
 import com.example.fifausersearchservice.feature.matchsearch.MatchSearchFragment
 import com.example.fifausersearchservice.feature.meta.MetaFragment
 import com.example.fifausersearchservice.feature.rank.TopRankFragment
-import com.example.fifausersearchservice.feature.user.dto.ui.UserFragment
+import com.example.fifausersearchservice.feature.user.ui.UserFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
