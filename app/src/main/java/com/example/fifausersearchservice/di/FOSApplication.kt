@@ -1,7 +1,7 @@
 package com.example.fifausersearchservice.di
 
 import android.app.Application
-import com.example.fifausersearchservice.di.main.mainModule
+import com.example.fifausersearchservice.di.module.mainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

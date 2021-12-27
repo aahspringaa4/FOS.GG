@@ -1,4 +1,4 @@
-package com.example.fifausersearchservice.di.main
+package com.example.fifausersearchservice.di.module
 
 import com.example.fifausersearchservice.data.main.MainRepository
 import com.example.fifausersearchservice.feature.main.viewmodel.MainViewModel
