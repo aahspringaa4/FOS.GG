@@ -12,7 +12,6 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
     R.layout.fragment_users
 ){
     private val vm: MainViewModel by sharedViewModel()
-    var rankList = arrayListOf<RankListViewData>()
 
     override fun observeEvent() {
         vm.success.observe(viewLifecycleOwner, {
@@ -20,7 +19,7 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
         })
     }
 
-    override fun initView() { // onCreate
+    override fun initView() {
     }
 
     private fun userSearch(){
@@ -31,9 +30,17 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
                 binding.tvTopRank.text = vm.division.name
             }
 
-            52 -> binding.coach.visibility = View.VISIBLE
+            52 -> {
+                binding.coach.visibility = View.VISIBLE
 
-            214 -> binding.volta.visibility = View.VISIBLE
+                binding.tvCoachTopRank.text = vm.division.name
+            }
+
+            214 -> {
+                binding.volta.visibility = View.VISIBLE
+
+                binding.tvTopRankVolta.text = vm.division.name
+            }
         }
 
         binding.tvName.text = vm.name
