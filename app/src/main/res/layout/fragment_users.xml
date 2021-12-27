@@ -71,10 +71,93 @@
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
-        <ListView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/left"
-            app:layout_constraintTop_toBottomOf="@id/textView"/>
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <TextView
+                android:id="@+id/tv_toprank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공식 경기 최고 등급 : "
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_topRank"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_topRank" />
+
+            <TextView
+                android:id="@+id/tv_topRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <TextView
+                android:id="@+id/tv_coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공식 경기 감독 모드 최고 등급 : "
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_coachTopRank"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_coachTopRank" />
+
+            <TextView
+                android:id="@+id/tv_coachTopRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/volta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toBottomOf="@+id/coach">
+
+            <TextView
+                android:id="@+id/tv_volta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="볼타 모드 공식 경기최고 등급 : "
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_topRankVolta"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_topRankVolta" />
+
+            <TextView
+                android:id="@+id/tv_topRankVolta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
