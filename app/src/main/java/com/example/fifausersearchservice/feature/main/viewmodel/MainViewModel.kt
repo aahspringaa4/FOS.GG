@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.fifausersearchservice.data.main.MainRepository
 import com.example.fifausersearchservice.feature.main.ui.MainActivity
+import com.example.fifausersearchservice.feature.user.Rank
+import com.example.fifausersearchservice.feature.user.toRank
 import kotlin.properties.Delegates
 
 class MainViewModel(
@@ -15,7 +17,7 @@ class MainViewModel(
     val success : MutableLiveData<Boolean> = MutableLiveData()
     val failed : MutableLiveData<Boolean> = MutableLiveData()
     var matchType by Delegates.notNull<Int>()
-    var division by Delegates.notNull<Int>()
+    var division by Delegates.notNull<Rank>()
     lateinit var achievementData: String
 
     fun userPost(){
@@ -38,7 +40,7 @@ class MainViewModel(
         repository.maxDivisionGet().subscribe { response ->
             if(response.isSuccessful){
                 matchType = response.body()?.matchType!!
-                division = response.body()?.division!!
+                division = response.body()?.division!!.toRank()
                 achievementData = response.body()?.achievementDate.toString()
                 success.value = true
             }
