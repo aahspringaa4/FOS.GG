@@ -19,7 +19,7 @@ enum class Rank(name: String) {
     ELEMENT1("유망주1"),
     ELEMENT2("유망주2"),
     ELEMENT3("유망주3"),
-    NULL("")
+    NULL("배치 중")
 }
 
 fun Int.toRank(): Rank =

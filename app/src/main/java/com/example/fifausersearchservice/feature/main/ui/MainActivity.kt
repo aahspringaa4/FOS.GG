@@ -26,10 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         super.onCreate(savedInstanceState)
 
         binding.btMain.setOnClickListener {
-            overridePendingTransition(0, 0)
-            val intent = intent
-            startActivity(intent)
-            overridePendingTransition(0, 0)
             setFrag(0)
         }
 

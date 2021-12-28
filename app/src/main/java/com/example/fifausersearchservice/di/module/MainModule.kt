@@ -13,5 +13,7 @@ import javax.inject.Singleton
 object MainModule {
 
     @Binds
-    fun provideMainRepository(mainRepository: MainRepository): MainRepository = MainRepository()
+    fun bindMainDataSource(
+        mainRepository: MainRepository
+    ): MainRepository = MainRepository()
 }
