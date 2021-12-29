@@ -1,6 +1,6 @@
 # FOS.GG (FIFA Online User Searching Service)
 
-피파온라인4 유저 도우미 앱
+피파온라인4 유저 도우미 서비스
 
 ### 기술스택
 ---
