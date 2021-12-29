@@ -26,17 +26,17 @@ class UserFragment: BaseFragment<FragmentUsersBinding>(
         when(vm.matchType) {
             50 -> {
                 binding.top.visibility = View.VISIBLE
-                binding.tvTopRank.text = vm.division.name
+                binding.tvTopRank.text = vm.division.tier
             }
 
             52 -> {
                 binding.coach.visibility = View.VISIBLE
-                binding.tvCoachTopRank.text = vm.division.name
+                binding.tvCoachTopRank.text = vm.division.tier
             }
 
             214 -> {
                 binding.volta.visibility = View.VISIBLE
-                binding.tvTopRankVolta.text = vm.division.name
+                binding.tvTopRankVolta.text = vm.division.tier
             }
         }
 

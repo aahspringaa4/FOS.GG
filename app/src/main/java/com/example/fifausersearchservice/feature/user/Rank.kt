@@ -1,6 +1,6 @@
 package com.example.fifausersearchservice.feature.user
 
-enum class Rank(name: String) {
+enum class Rank(val tier : String) {
     SUPER_CHAMPIONS("슈퍼 챔피언스"),
     CHAMPIONS("챔피언스"),
     SUPER_CHALLENGE("슈퍼 챌린지"),
