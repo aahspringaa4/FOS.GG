@@ -3,14 +3,12 @@ package com.example.fifausersearchservice.feature.main.viewmodel
 import ACCESS_TOKEN
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.fifausersearchservice.data.main.MainRepository
 import com.example.fifausersearchservice.feature.main.ui.MainActivity
 import com.example.fifausersearchservice.feature.user.Rank
-import com.example.fifausersearchservice.feature.user.toRank
 import kotlin.properties.Delegates
 
 class MainViewModel(
-    private val repository: MainRepository
+    private val repository: FifaRepository
 ) : ViewModel() {
     lateinit var name : String
     var level by Delegates.notNull<Int>()
