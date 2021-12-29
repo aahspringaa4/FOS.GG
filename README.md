@@ -1,6 +1,6 @@
 # FOS.GG (FIFA Online User Searching Service)
 
-피파온라인4 유저의 정보를 검색하고 상위랭커나 최신메타 최고등급 등을 검색 할 수 있다.
+피파온라인4 유저 도우미 앱
 
 ### 기술스택
 ---
