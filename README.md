@@ -7,5 +7,3 @@
 * 언어 : Kotlin
 * 아키텍쳐 : Clean Architecture, MVVM
 * 라이브러리 : Retrofit2, RxJava, Dagger - Hilt, Coroutine, LiveData, DataBinding
-
-
