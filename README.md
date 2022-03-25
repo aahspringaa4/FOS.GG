@@ -6,4 +6,4 @@
 ---
 * 언어 : Kotlin
 * 아키텍쳐 : MVVM
-* 라이브러리 : Retrofit2, RxJava, Dagger - Hilt, Coroutine, LiveData, DataBinding
+* 라이브러리 : Retrofit2, RxJava, Dagger - Hilt, Coroutine, LiveData, DataBinding, AAC
